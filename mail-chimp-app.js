@@ -56,7 +56,7 @@ app.post("/", function(req, res){
   });
   //console.log(firstName, lastName, email);
 
-request.write(jsonData);
+request.write(jsonData); // sending user data to mail chimp server.
 request.end();
 
 }); // END OF app.post
