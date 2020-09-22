@@ -1,9 +1,9 @@
- /*=====================================================================================================
-                                        First Permutation
-                              News letter app using Mail Chimp API
+/*=====================================================================================================
+                                           2nd Permutation
+                                News letter app using Mail Chimp API
                             Can use it for www.martyskypepianolessons.com
                                           MODULES USED:
- ======================================================================================================*/
+  =====================================================================================================*/
 //jshint esversion: 6
 
 const express = require("express");
@@ -47,22 +47,41 @@ app.post("/", function(req, res){
 
   const options = {  // JavaScript Object...
     method: "POST",
-    auth: "marty:74a913032c0e4e4cd38c121347224477-us2"
+    auth: "marty:74a913032c0e4e4cd38c121347224477-us2"  // my API key....us2 is one of their servers...they have many
   }
 
   const request = https.request(url, options, function(response) {
+
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/success.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
+
     response.on("data", function(data){
       console.log(JSON.parse(data));
     });
   });
   //console.log(firstName, lastName, email);
 
-request.write(jsonData); // sending user data to mail chimp server.
+request.write(jsonData);
 request.end();
 
 }); // END OF app.post
 
+/*===========================================
+            RESPECTIVE ROUTES
+ ===========================================*/
+app.post("/failure", function(req, res){
+  res.redirect("/");
+});
 
+app.post("/success", function(req, res){
+  res.redirect("/");
+});
+
+
+// run the server
 app.listen(3000, function(){
   console.log("Server is running on port 3000");
 });
