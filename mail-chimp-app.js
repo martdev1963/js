@@ -2,7 +2,7 @@
                                 News letter app using Mail Chimp API
                             Can use it for www.martyskypepianolessons.com
                                           MODULES USED:
-=====================================================================================================*/
+ ======================================================================================================*/
 //jshint esversion: 6
 
 const express = require("express");
