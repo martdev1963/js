@@ -1,5 +1,6 @@
  /*=====================================================================================================
-                                News letter app using Mail Chimp API
+                                        First Permutation
+                              News letter app using Mail Chimp API
                             Can use it for www.martyskypepianolessons.com
                                           MODULES USED:
  ======================================================================================================*/
