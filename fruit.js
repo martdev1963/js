@@ -25,29 +25,9 @@
           
         </div>
             
-        
-      
-      
+       
         <script>
-             /**********************************
-                Exercise 5: Stop the slots when we click on the button.
-                Exercise 7: Check if we win or lose the game. 
-                Exercise 8: Play the sound won.mp3 when all ths lots have the same image.
-                Bonus: Add a button for background music of changing slots.
-
-                Homework: Create a Try Again Button.
-                - Create an empty div with the id gameover inside the .container div.
-                - Create an empty function named restart
-                - Inside restart()
-                    Play the audio with id backgroundMusic
-                    Set the innerHTML of gameover div to " "
-                    Set the heading back to name + "'s Fruit Zen"
-                    Call the randomize function using setInterval after every 300ms
-
-                - Inside stop()
-                    Add a button inside gameover using innerHTML
-                    Inside the button, call restart() on click.
-            ***********************************/
+             
             var name = prompt("Enter your name");
             document.getElementById('heading').innerHTML = name + "'s Fruit Zen";
           
