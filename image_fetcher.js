@@ -26,7 +26,7 @@
                 const response = await fetch('download.jpeg');
                 //const response = fetch('iss200.png');
                 const blob = await response.blob();
-                document.getElementById('picture_x').src = URL.createObjectURL(blob); // placing the returned blob image data and placing it into the <i mg> DOM element with id: picture_x
+                document.getElementById('picture_x').src = URL.createObjectURL(blob); // placing the returned blob image data and placing it into the <img> DOM element with id: picture_x
             }
 
 
